@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Absolute BBQ</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      <header>
+      <div class="nav">
+      <ul>
+       <h1><a href="index.html"><img src="../images/logo2.png" alt="logo" width="80px" height="80px"><span class="name">Absolute BBQ</span></a></h1>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="aboutus.html">About</a></li>
+          <li class="active"><a href="new.html">WhatsNew</a></li>
+          <li class="active"><a href="faq.html">FAQ</a></li>
+          <li class="active"><a href="customercare.html">CustomerCare</a>
+          <li class="active"><a href="productsinfo.html">Products-Info</a></li>
+          <li class="active"><a href="catalog.html">Catalog</a></li>
+      </ul>
+      </div>
+       </header>
+        <h1 id="page-name">Products Information</h1>
+         <script type="text/javascript">
+      var firstName = prompt('Enter your first name?');
+      var lastName = prompt('Enter your last name?');
+      alert("HELLOOO......." + firstName + " "+ lastName+ "! ...WELCOME TO KNOW MORE ABOUT THE PRODUCTS WE USE");
+             firstName = eval(prompt("Want to know more about our GRILLING ACCESSORIES...\nENTER A PRODUCT NUMBER\n1-Tongs\n2-Lifter\n3-Skewers"));
+          switch(firstName){
+        case 1:
+          tongs();
+          break;
+        case 2:
+          lifter();
+          break;
+        case 3:
+          skewers();
+          break;
+        default:
+          document.write("<p>HERE ARE THE PRODUCTS WE HAVE</p>");
+      }
+     
+	function item(image,description){
+        this.image = image;
+        this.description = description;
+        this.show = displayProduct;
+      }
+function displayProduct(){
+      document.write("<img class = 'displayimg' src = '", this.image, "'>");
+      document.write("<br><p>Description: ",this.description,"</p><br>");
+     }
+           function tongs() {
+      var item1 = new item("http://www.thinkgeek.com/images/products/additional/large/ivms_darth_vader_lightsaber_bbq_tongs_inuse.jpg", "Price--12$<br\>Weber Original Stainless Steel Locking Barbecue Tongs. While these tongs were moderately lightweight, they also seemed a bit flimsy to our testers, especially when lifting heavier foods. A little longer and heavier than our winner, they required a bit more work to use.");
+      item1.show();
+     }
+           function lifter(){
+      var item2 = new item("https://cdn.shocho.co/sc-image/a/c/3/f/ac3fdfdda96acf3410c62a3fa30c869b.jpg","price--18$<br\>The lift the grate to add fresh charcoal or soaked wood chips for smoking. Not only is it screaming hot—it’s also unwieldy—especially if it’s one of the handle-less grates commonly found on ceramic kamado cookers.");
+      item2.show();
+     }
+     function skewers(){
+      var item3 =  new item("https://images-na.ssl-images-amazon.com/images/I/81fM0Rr2KzL._SY355_.jpg","price--26$<br\>But every skewerer needs a good set of skewers with which to do the skewering. It's possible to make a great meal-on-a-stick with a branch you find in the woods, or perhaps a bit of piano wire (my wife and I enjoyed dozens of skewered-on-piano-wire meals while in China), but if you want consistency, ease of use, and longevity in your pointed sticks, this is the one you should buy");
+      item3.show();
+     }
+            
+        </script>
+    </body>
+</html>

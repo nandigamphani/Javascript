@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Absolute BBQ</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+ <body>
+  <header>
+    <div class="nav">
+      <ul>
+       <h1><a href="index.html"><img src="../images/logo2.png" alt="logo" width="80px" height="80px"><span class="name">Absolute BBQ</span></a></h1>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="aboutus.html">About</a></li>
+          <li class="active"><a href="new.html">WhatsNew</a></li>
+          <li class="active"><a href="faq.html">FAQ</a></li>
+          <li class="active"><a href="customercare.html">CustomerCare</a>
+          <li class="active"><a href="productsinfo.html">Products-Info</a></li>
+          <li class="active"><a href="catalog.html">Catalog</a></li>
+          </ul>
+      </div>
+  </header>
+      <h1 id="page-name">Catalogs of Grilling Accessories</h1>
+     <script type ="text/javascript">
+            	function Products(product_image, product_name,product_price, product_availability)
+            	{
+					this.image = product_image;
+					this.name = product_name;
+                    this.price = product_price;
+					this.availability = product_availability;
+            		this.showProduct = showProduct;
+            	}
+
+                function showProduct()
+            	{
+                   document.write("<div style='margin:auto; width:50%;'><img src="+this.image+" style='height:100px; width:120px;'></div>");
+            	}
+                var productDetails = new Array();
+            	var grillingTools = new Array();
+            	var charcoalTools = new Array();
+            	var prepTools = new Array();
+                productDetails.push(grillingTools);
+            	productDetails.push(charcoalTools);
+            	productDetails.push(prepTools);
+                grillingTools.push(new Products("https://alexnld.com/wp-content/uploads/2016/08/4pcs-Portable-Stainless-Steel-BBQ-Tools-Outdoor-Barbecue-Grill-Tool-Set-Black_nologo_600x600.jpeg","Stainless Steel Grill Tool Set", "$43.99", "Y"));
+                grillingTools.push(new Products("https://cdn.shocho.co/sc-image/b/7/5/a/b75a3db608512f698a104cdea23a0a1d.jpg", "Cast Iron Grill Press ","$67.99", "N"));
+                grillingTools.push(new Products("https://cdn.shocho.co/sc-image/d/6/e/1/d6e1283d51a37f010840d24979c6bab1.jpg", "BBQ Tongs With Digital Thermometer", "$35.99", "Y"));
+                charcoalTools.push(new Products("https://cdn.shocho.co/sc-image/f/4/a/c/f4ac920d7e9b18412765e4d841a0e347.jpg?i10c=img.resize.fit(width:1000,height:1000,bordercolor:%270xffffff%27)", "Charcoal Electric Lighter & Firestarter", "$25.99", "Y"));
+            	charcoalTools.push(new Products("https://cdn.shopify.com/s/files/1/0491/1713/products/1a9db20ee47ad9a4dd9a971045a691c1.jpg?v=1491650661", "Aluminized Steel Charcoal Chimney", "$52.99", "Y"));
+            	charcoalTools.push(new Products("https://cdn.shocho.co/sc-image/e/f/4/1/ef41c49a45266794fb7c19982cb0d260.jpg", " Portable Electric Charcoal Firestarter","$38.99", "N"));
+            	prepTools.push(new Products("https://cdn.shocho.co/sc-image/7/8/6/3/78639812418becd8f0f725e01345d7a0.jpg", "Heat Resistant Grill Glove", "$23.99", "Y"));
+                prepTools.push(new Products("https://images-na.ssl-images-amazon.com/images/I/81oOuQBo6-L._SL1500_.jpg", "Versatile Grill Station", "$19.99", "Y"));
+                var category = ["Grilling Tools", "Charcoal Tools", "Prep Tools"];
+                document.write("<table>");
+                document.write("<tr><td></td>"  +
+            				"<td > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>" +
+                            "<td>&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;</td>" +
+                            "<td> &nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;</td>" +
+							"<td>Availability</td></tr>");
+
+				for(var i = 0; i < productDetails.length; i++)
+            	{
+					var count = 1;
+					document.write("<tr>");
+                    document.write("<td rowspan='3'><b>" + category[i] + "</b></td>");
+            		for(var j = 0; j < productDetails[i].length; j++)
+            		{
+						if(count>1) {
+							document.write("<tr>");
+						}
+            			document.write("<td>");
+						productDetails[i][j].showProduct();
+                        document.write("</td><td>" + productDetails[i][j].name + "</td>");
+                        document.write("<td>" + productDetails[i][j].price + "</td>");
+						document.write("<td>" + productDetails[i][j].availability + "</td>");
+						if(count>1) {
+							document.write("</tr>");
+						}
+						count++;
+            		}
+					document.write("</tr>");
+            	}
+                document.write("</table>");
+            </script>
+    </body>
+</html>

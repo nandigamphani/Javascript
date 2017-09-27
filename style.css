@@ -1,0 +1,125 @@
+.displayimg{
+    width: 450px;
+    height: 450px;
+    align-content: center;
+    margin-left:500px;
+    border-style: solid;
+    border-color:#414141 #EC7063;
+    border-width: 25px;
+}
+body{
+    position: relative;
+        margin: 0;
+        padding: 0;
+        background-color:white;
+    }
+.name{
+    text-decoration: none;
+    text-align: center;
+    color: #414141;
+    position: relative;
+    bottom: 15px;
+    font-family:Comic Sans MS;
+    font-size: 1.8em;
+    }
+
+#container img {
+    position: relative;
+    top: 12px;
+    margin-left: 20px;
+    }
+
+#container h1{
+    text-align: center;
+    }
+
+#container{
+    display: block;
+    height: auto;
+    position: relative;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+}
+#page-name{
+    color: darkcyan;
+    font-family: Comic Sans MS;
+}
+.nav ul,.footer-nav ul 
+    {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+.nav li,.footer-nav li
+    {
+      font-family: Comic Sans MS;
+      width: 150px;
+      height: 50px;
+      font-size: 1.9em;
+      display: inline-block;
+     line-height: 50px;
+    }
+ .nav a ,.footer-nav a 
+    {
+      text-decoration: none;
+      color:#EC7063;
+      display: block;
+        font-size: 20px;
+    }
+.footer-nav{
+     text-decoration: none;
+      color:#EC7063;
+      display: block;
+        font-size: 20px;
+}
+ 
+.nav a:hover
+    {
+      background-color: teal;
+    }
+.navbar-brand
+    {
+        padding:20PX;
+        background-color: #E14658;
+        margin-top: 0px;
+        color: ghostwhite;
+    }
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #AB970C;
+    top: 10px;
+    }
+h3{
+    font-family: monospace;
+    text-align: center;
+}
+#main-p{
+    color: #414141  ;
+    font-family: Comic Sans MS;
+    }
+p{
+    text-align:center;
+   font-size: 1em;
+   color:  #E14658;
+    font-family: fantasy;
+}
+
+.contact-details{
+    text-align: center;
+}
+
+
+table, th, tr, td {
+    border-style: solid;
+    border-color: coral;
+    
+}
+
+table{
+	margin: auto;
+    
+}
+
